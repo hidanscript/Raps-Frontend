@@ -1,0 +1,57 @@
+.home-page {
+	width: 100vw;
+	height: 100vh;
+	background: url(../../../img/bg2.jpg);
+	background-size: 100%, 100%;
+	background-repeat: no-repeat;
+	background-color: black;
+	text-align: center;
+}
+
+.home-page button {
+	position: absolute;
+	width: 16em;
+	border: 1px solid white;
+	color: white;
+	font-family: 'Roboto',sans-serif;
+	font-size: 1.1em;
+	height: 3em;
+	background-color: rgba(0,0,0,.5); 
+	top: 75%;
+	left: 75%;
+	transform: translate(-50%,-50%);
+	transition: 150ms ease-in;
+}
+
+.home-page button:hover {
+	background-color: rgba(255,255,255,.2);
+}
+
+.home-text {
+	color: white;
+	text-align: center;
+	background: none;
+	position: absolute;
+}
+
+.home-text h1 {
+	top: 20%;
+	margin-left: 0.7em;
+	position: absolute;
+	font-family: 'Pacifico', sans-serif;
+	font-size: 6em;
+	font-style: italic;
+}
+
+.home-text p {
+	position: absolute;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	width: 8em;
+	transform: translate(150%, 30%);
+	font-size: 4em;
+}
+
+.home-text p strong {
+	color: lightblue;
+}
