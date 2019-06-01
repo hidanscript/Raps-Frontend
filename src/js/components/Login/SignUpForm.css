@@ -1,0 +1,61 @@
+.sign-up-form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.sign-up-form form {
+	background-color: #FFF;
+	width: 300px;
+	padding: 10px;
+	height: 410px;
+	box-shadow: 0 0 35px;
+}
+
+.sign-up-form form h2 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 28px;
+}
+
+.sign-up-form form p {
+	margin: 0;
+	margin-top: 5px;
+	padding: 0;
+	font-size: 12px;
+	color: gray;
+}
+
+.sign-up-form form p a {
+	text-decoration: none;
+}
+
+.sign-up-form form input[type=text],
+.sign-up-form form input[type=email],
+.sign-up-form form input[type=password] {
+	width: 250px;
+	padding: 10px;
+	margin: 6px;
+	border-radius: 5px;
+	border: 2px solid rgba(0,0,0,.3);
+}
+
+.sign-up-form form input[type=submit] {
+	width: 80px;
+	height: 40px;
+	background-color: #6E77FF;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	padding: 5px;
+	margin: 12px;
+	color: #FFF;
+	border: none;
+	border-radius: 4px;
+	transition: 150ms ease-in;
+}
+
+.sign-up-form form input[type=submit]:hover {
+	cursor: pointer;
+	background-color: #585FCC;
+}

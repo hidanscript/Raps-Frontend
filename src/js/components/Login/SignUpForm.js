@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './SignUpForm.css';
 
 export default class SignUpForm extends Component {
 
@@ -12,10 +13,10 @@ export default class SignUpForm extends Component {
 
 	validateForm(form) {
 
-		if(this.userValue.value.trim() != '' &&
-			this.passValue.value != '' &&
+		if(this.userValue.value.trim() !== '' &&
+			this.passValue.value !== '' &&
 			this.passValue.value === this.repassValue.value &&
-			this.emailValue.value.trim() != '' &&
+			this.emailValue.value.trim() !== '' &&
 			this.emailValue.value === this.reEmailValue.value) {
 
 			return true;
@@ -41,23 +42,32 @@ export default class SignUpForm extends Component {
 				email : this.emailValue.value
 			}
 
+			this.userValue.value = '';
+			this.passValue.value = '';
+			this.repassValue.value = '';
+			this.emailValue.value = '';
+			this.reEmailValue.value = '';
+
 			console.log(newUser);
 			return <Link to="/home" />
+		} else {
+			alert('Error in some of the fields, check them and try it again.');
 		}
 	}
 
 	render() {
 		return(
 			<div className="sign-up-form">
-				<Form onSubmit={this.sendForm}>
+				<form onSubmit={this.sendForm}>
 					<h2>Sign Up</h2>
 					<input type="text" id="user-input" placeholder="Username" ref={(user_value) => this.userValue = user_value}/>
 					<input type="password" id="pass-input" placeholder="Password" ref={(password_value) => this.passValue = password_value}/>
 					<input type="password" id="repass-input" placeholder="Retype your Password" ref={(repassword_value) => this.repassValue = repassword_value}/>
 					<input type="email" id="email-input" placeholder="Email" ref={(email_value) => this.emailValue = email_value}/>
 					<input type="email" id="reEmail-input" placeholder="Retype your Email" ref={(reEmail_value) => this.reEmailValue = reEmail_value}/>
-					<input type="submit" className="submit-button"/>
-				</Form>
+					<p>Already have an account? <a href="#">Sign In.</a></p>
+					<input type="submit" className="submit-button" value="Register"/>
+				</form>
 			</div>
 		);
 	}
