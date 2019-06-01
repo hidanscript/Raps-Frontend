@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './SignUpForm.css';
+import validateSignUpForm from './validateSignUpForm';
 
 export default class SignUpForm extends Component {
 
@@ -11,13 +12,11 @@ export default class SignUpForm extends Component {
 		this.validateForm = this.validateForm.bind(this);
 	}
 
-	validateForm(form) {
+	validateForm() {
 
-		if(this.userValue.value.trim() !== '' &&
-			this.passValue.value !== '' &&
-			this.passValue.value === this.repassValue.value &&
-			this.emailValue.value.trim() !== '' &&
-			this.emailValue.value === this.reEmailValue.value) {
+		if(validateSignUpForm.isUsername(this.userValue.value) &&
+			validateSignUpForm.isPassword(this.passValue, this.repassValue) &&
+			validateSignUpForm.isEmail(this.emailValue, this.reEmailValue)) {
 
 			return true;
 		}
@@ -35,7 +34,7 @@ export default class SignUpForm extends Component {
 			email : '',
 		};
 
-		if(this.validateForm(event)) {
+		if(this.validateForm) {
 			newUser = {
 				username : this.userValue.value.trim(),
 				password : this.passValue.value,
@@ -65,7 +64,7 @@ export default class SignUpForm extends Component {
 					<input type="password" id="repass-input" placeholder="Retype your Password" ref={(repassword_value) => this.repassValue = repassword_value}/>
 					<input type="email" id="email-input" placeholder="Email" ref={(email_value) => this.emailValue = email_value}/>
 					<input type="email" id="reEmail-input" placeholder="Retype your Email" ref={(reEmail_value) => this.reEmailValue = reEmail_value}/>
-					<p>Already have an account? <a href="#">Sign In.</a></p>
+					<p>Already have an account? <a href="localhost:3000">Sign In.</a></p>
 					<input type="submit" className="submit-button" value="Register"/>
 				</form>
 			</div>
