@@ -9,17 +9,15 @@ export default class App extends Component {
 
 	render() {
 		return(
-			<BrowserRouter>
-				<div className="App">
-					<Route render={({location}) => (
-						<Switch>
-							<Route exact path="/home" component={Home}/>
-							<Route path="/" component={Home}/>
-							<Route path="/main" component={MainPage}/>
-						</Switch>
-					)} />
-				</div>
-			</BrowserRouter>
+			<div className="App">
+				<Route render={({location}) => (
+					<Switch>
+						<Route path="/home" component={Home}/>
+						<Route path="/" component={Home}/>
+						<Route path="/main" component={MainPage}/>
+					</Switch>
+				)} />
+			</div>
 		);
 	}
 }

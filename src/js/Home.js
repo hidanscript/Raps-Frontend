@@ -6,6 +6,10 @@ import SignUpForm from './components/Login/SignUpForm';
 
 export default class Home extends Component {
 
+	showForm(){
+		return <SignUpForm/>
+	}
+
 	render() {
 		return(
 			<div className="home-page">
@@ -13,10 +17,7 @@ export default class Home extends Component {
 					<h1>Raps</h1>
 					<p>What<strong>ever</strong><br/> it takes,<br/> <strong>do it.</strong></p>
 				</div>
-				<Link to="/main">
-					<button>GET STARTED</button>
-				</Link>
-				<SignUpForm/>
+				<button onClick={() => {this.showForm.bind(this)}}>GET STARTED</button>
 			</div>
 		);
 	}
