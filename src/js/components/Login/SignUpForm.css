@@ -7,7 +7,7 @@
 
 .sign-up-form form {
 	background-color: #FFF;
-	width: 300px;
+	width: 280px;
 	padding: 10px;
 	height: 410px;
 	box-shadow: 0 0 35px;
@@ -34,7 +34,7 @@
 .sign-up-form form input[type=text],
 .sign-up-form form input[type=email],
 .sign-up-form form input[type=password] {
-	width: 250px;
+	width: 80%;
 	padding: 10px;
 	margin: 6px;
 	border-radius: 5px;
