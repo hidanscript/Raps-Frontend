@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './SignUpForm.css';
 import validateSignUpForm from './validateSignUpForm';
+import FacebookLoginButton from './FacebookLoginButton';
 
 export default class SignUpForm extends Component {
 
@@ -75,6 +76,7 @@ export default class SignUpForm extends Component {
 					<input type="email" id="email-input" placeholder="Email" ref={(email_value) => this.emailValue = email_value}/>
 					<input type="email" id="reEmail-input" placeholder="Retype your Email" ref={(reEmail_value) => this.reEmailValue = reEmail_value}/>
 					<p>Already have an account? <a href="localhost:3000">Sign In.</a></p>
+					<FacebookLoginButton/>
 					<input type="submit" className="submit-button" value="Register"/>
 				</form>
 			</div>

@@ -1,0 +1,35 @@
+[33mcommit e49b4b3cd0f11828de87d1b79cdb8c6d9a7c2ee9[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: hidanscript <hidanshira2@gmail.com>
+Date:   Fri Jun 7 01:38:53 2019 -0300
+
+    Added Navigation Bar
+
+[33mcommit 8bda59ed6e2e404843054d527e571c752e27d931[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: hidanscript <hidanshira2@gmail.com>
+Date:   Sat Jun 1 15:08:58 2019 -0300
+
+    More readable and scalable code
+
+[33mcommit 9d4c1f739604aef48d269f778f71bf7ee53db16c[m
+Author: hidanscript <hidanshira2@gmail.com>
+Date:   Sat Jun 1 14:30:32 2019 -0300
+
+    Modified some Routes
+
+[33mcommit da0ac63235e5870043e81fe1f8b73cddc8681421[m
+Author: hidanscript <hidanshira2@gmail.com>
+Date:   Fri May 31 23:48:09 2019 -0300
+
+    Fixed Sign Up form CSS
+
+[33mcommit e315eb529afa421b1aeac0118246b24feafc26f2[m
+Author: hidanscript <hidanshira2@gmail.com>
+Date:   Fri May 31 23:20:28 2019 -0300
+
+    Fixed bugs and added CSS to Sign Up form
+
+[33mcommit 35383dc3117d37c258ea0e1943fa1bd6e869cb5a[m
+Author: hidanscript <hidanshira2@gmail.com>
+Date:   Fri May 31 20:57:34 2019 -0300
+
+    First Commit
