@@ -12,8 +12,8 @@ export default class App extends Component {
 			<div className="App">
 				<Route render={({location}) => (
 					<Switch>
-						<Route path="/home" component={Home}/>
-						<Route path="/" component={Home}/>
+						<Route path="/home" component={MainPage}/>
+						<Route path="/" component={MainPage}/>
 						<Route path="/main" component={MainPage}/>
 					</Switch>
 				)} />

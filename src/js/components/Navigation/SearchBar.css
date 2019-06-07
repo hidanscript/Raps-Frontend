@@ -1,0 +1,16 @@
+.search-bar {
+	margin : 12px;
+}
+
+.search-bar input {
+	width: 15em;
+	height: 1.5em;
+	color: white;
+	border-radius: 8px;
+	background-color: rgba(255,255,255,.2);
+	border: none;
+}
+
+.search-bar input::placeholder {
+	padding: 10px;
+}

@@ -10,13 +10,20 @@ export default class SignUpForm extends Component {
 
 		this.sendForm = this.sendForm.bind(this);
 		this.validateForm = this.validateForm.bind(this);
+
+		this.state = {
+			idVisible : 'form-visible'
+		};
 	}
 
 	validateForm() {
 
-		if(validateSignUpForm.isUsername(this.userValue.value) &&
-			validateSignUpForm.isPassword(this.passValue, this.repassValue) &&
-			validateSignUpForm.isEmail(this.emailValue, this.reEmailValue)) {
+		//vf = Validate Form.
+		const vf = new validateSignUpForm();
+
+		if(vf.isUsername(this.userValue.value) &&
+			vf.isPassword(this.passValue, this.repassValue) &&
+			vf.isEmail(this.emailValue, this.reEmailValue)) {
 
 			return true;
 		}
@@ -47,8 +54,11 @@ export default class SignUpForm extends Component {
 			this.emailValue.value = '';
 			this.reEmailValue.value = '';
 
+			this.setState({
+				idVisible : 'form-invisible'
+			});
+
 			console.log(newUser);
-			return <Link to="/home" />
 		} else {
 			alert('Error in some of the fields, check them and try it again.');
 		}
@@ -56,7 +66,7 @@ export default class SignUpForm extends Component {
 
 	render() {
 		return(
-			<div className="sign-up-form">
+			<div className='sign-up-form' id={this.state.idVisible}>
 				<form onSubmit={this.sendForm}>
 					<h2>Sign Up</h2>
 					<input type="text" id="user-input" placeholder="Username" ref={(user_value) => this.userValue = user_value}/>

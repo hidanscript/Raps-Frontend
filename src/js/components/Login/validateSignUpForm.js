@@ -1,9 +1,8 @@
-import { Component } from 'react';
 
-export default class validateSignUpForm extends Component {
+export default class validateSignUpForm  {
 
 	constructor(props) {
-		super(props);
+		//super(props);
 
 		this.isUsername = this.isUsername.bind(this);
 		this.isPassword = this.isPassword.bind(this);
@@ -11,7 +10,10 @@ export default class validateSignUpForm extends Component {
 	}
 
 	isUsername(username) {
+		//this.username = username;
+
 		if(username.trim() !== '' ) {
+			console.log("user isnt empty");
 			return true;
 		} else {
 			return false;
@@ -19,6 +21,9 @@ export default class validateSignUpForm extends Component {
 	}
 
 	isPassword(password, retypedPassword) {
+		//this.password = password;
+		//this.retypedPassword = retypedPassword;
+
 		if(password !== '' && password === retypedPassword) {
 			return true;
 		} else {
@@ -27,6 +32,9 @@ export default class validateSignUpForm extends Component {
 	}
 
 	isEmail(email, retypedEmail) {
+		//this.email = email;
+		//this.retypedEmail = retypedEmail;
+
 		if(email.trim() !== '' && email.trim() === retypedEmail.trim()) {
 			return true;
 		} else {

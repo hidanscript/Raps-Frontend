@@ -1,13 +1,19 @@
 .sign-up-form {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
+	animation: intro 1s ease;
+	transition: 350ms ease-out;
 }
 
 .sign-up-form form {
+	position: fixed;
 	background-color: #FFF;
 	width: 280px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 	padding: 10px;
 	height: 410px;
 	box-shadow: 0 0 35px;
@@ -58,4 +64,21 @@
 .sign-up-form form input[type=submit]:hover {
 	cursor: pointer;
 	background-color: #585FCC;
+}
+
+#form-visible {
+	opacity: 1;
+}
+
+#form-invisible {
+	opacity: 0;
+	pointer-events: none;
+}
+
+@keyframes intro {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
 }

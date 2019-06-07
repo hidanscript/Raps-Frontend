@@ -1,0 +1,16 @@
+.nav-link {
+	display: inline-block;
+	margin-left: 50px;
+}
+
+.nav-link a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	transition: 250ms ease;
+}
+
+.nav-link a:hover {
+	color: gray;
+}
